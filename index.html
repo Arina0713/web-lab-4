@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа №4</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- Шапка -->
+     <header id="site-header" class="bg-white shadow-sm py-3 mb-4">
+        <div class="container d-flex align-items-center">
+            <img src="logo.jpg" alt="Логотип" class="me-3">
+            <h1 class="h3 md-0" id="site-title">Разработка Web-интерфейса</h1>
+        </div>
+    </header>
+    <!-- Навигация -->
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4 stiky-top">
+        <div class="container nav-content">
+            <ul>
+                <li><a href="#table">Таблица</a></li>
+                <li><a href="#links">Гиперссылки</a></li>
+                <li><a href="#form">Форма</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Основной контент -->
+     <main class="container">
+        <!-- Таблица из задания 2 -->
+         <section id="table" class="mb-5">
+            <h2 class="mb-4 border-bottom pb-2">Задание 2: Таблица</h2>
+            <div class="table-responsive">
+                <table class="table table-striped table-hover border">
+                    <thead class="table-light">
+                        <tr>
+                            <th colspan="2" class="text-center">ФИО</th>
+                            <th>Работа</th>
+                            <th>Оценка</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="2">Иванов И.И.</td>
+                            <td rowspan="2">ИИ11</td>
+                            <td>Лабы</td>
+                            <td>5</td></tr>
+                        <tr>
+                            <td>Экзамен</td>
+                            <td>4</td>
+                        </tr>
+                        <tr class="odd-row">
+                            <td>Петров П.П.</td>
+                            <td>МО31</td>
+                            <td>Лабы</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Сидоров С.С.</td>
+                            <td>ИН21</td>
+                            <td>Лабы</td>
+                            <td>5</td>
+                        </tr>
+                        <tr class="odd-row">
+                            <td>Кузнецов К.К.</td>
+                            <td>ПИ21</td>
+                            <td>Экзамен</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>Смирнова А.А.</td>
+                            <td>ФИ41</td>
+                            <td>Курсовая</td>
+                            <td>Отлично</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <!-- Задание 1: Гиперссылки -->
+         <section id="links" class="mb-5">
+            <h2 class="mb-4 border-bottom pb-2">Задание 1: Гиперссылки</h2>
+            <ul>
+                <li><a href="http://kubsu.ru">Абсолютная ссылка на kubsu.ru</a></li>
+                <li><a href="https://kubsu.ru">Абсолютная https-ссылка на kubsu.ru</a></li>
+                <li><a href="https://google.com"><img src="foto.jpg" width="400" alt="Картинка"></a></li>
+                <li><a href="/about">Сокращенная внутренняя страница</a></li>
+                <li><a href="/">Сокращенная главная</a></li>
+                <li><a href="#top">Ссылка на фрагмент страницы</a></li>
+                <li><a href="https://example.com/?p1=v1&p2=v2&p3=v3">Три параметра в URL</a></li>
+                <li><a href="https://example.com/?id=123">Параметр ID</a></li>
+                <li><a href="demo.html">Относительная текущая папка</a></li>
+                <li><a href="about/index.html">Относительная /about/</a></li>
+                <li><a href="../index.html">На уровень выше</a></li>
+                <li><a href="../../index.html">Два уровня выше</a></li>
+                <li><p>Контекстная <a href="https://google.com">ссылка</a> в тексте.</p></li>
+                <li><a href="https://wikipedia.org/#Main_page">Фрагмент стороннего сайта</a></li>
+                <!-- Image Map -->
+                 <li>
+                    <img src="map-image.jpg" usemap="#workmap" alt="Карта ссылок" style="max-width: 400px;">
+                    <map name="workmap">
+                        <area shape="rect" coords="0,0,100,100" href="https://google.com" title="Google">
+                        <area shape="circle" coords="150,50,30" href="https://bing.com" title="Bing">
+                    </map>
+                </li>
+                <li><a href="">Пустой href</a></li>
+                <li><a>Без атрибута href</a></li>
+                <li><a href="https://example.com" rel="nofollow">Запрет поисковикам (rel)</a></li>
+                <li><a href="https://example.com">Мета-запрет условно</a></li>
+                <li>Нумерованный список:
+                    <ol>
+                        <li><a href="https://google.com" title="Поиск Google">Google</a></li>
+                        <li><a href="https://yandex.ru" title="Поиск Яндекс">Яндекс</a></li>
+                    </ol>
+                </li>
+                <li><a href="ftp://user:pass@ftp.example.com/file.zip">FTP c авторизацией</a></li>
+            </ul>
+        </section>
+        <!-- Форма из задания 1 -->
+         <section id="form">
+            <h2>Задание 1: Форма</h2>
+            <form action="https://vash-said.ru" method="post">
+                <label for="fullname">ФИО:</label>
+                <input type="text" name="fullname" id="fullname" required placeholder="Иванов Иван Иванович">
+                <label for="phone">Телефон:</label>
+                <input type="tel" name="phone" id="phone" pattern="[0-9+]{10,}" title="Формат: +7... или 10 цифр" required>
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" id="email" required placeholder="example@mail.com">
+                <label for="birthday">Дата рождения:</label>
+                <input type="date" name="birthday" id="birthday" required>
+                <fieldset>
+                    <legend>Пол:</legend>
+                    <input type="radio" name="gender" id="male" value="male" required>
+                    <label for="male">Мужской</label>
+                    <input type="radio" name="gender" id="female" value="female">
+                    <label for="female">Женский</label>
+                </fieldset>
+                <label for="languages">Любимый язык программирования:</label>
+                <select multiple name="languages" id="languages" size="6">
+                    <option>Pascal</option>
+                    <option>C</option>
+                    <option>C++</option>
+                    <option>JavaScript</option>
+                    <option>PHP</option>
+                    <option>Python</option>
+                    <option>Java</option>
+                    <option>Haskell</option>
+                    <option>Clojure</option>
+                    <option>Prolog</option>
+                    <option>Scala</option>
+                </select>
+                <label for="bio">Биография:</label>
+                <textarea name="bio" id="bio" rows="5" required placeholder="Расскажите о себе..."></textarea>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="contract" name="contract" required> C контрактом ознакомлен(-а)
+                </label>
+                <button type="submit">Сохранить</button>
+            </form>
+        </section>
+    </main>
+    <!-- Подвал -->
+     <footer id="site-footer">
+        <div class="container footer-content">
+            <p>&copy; Сергей Синица</p>
+        </div>
+    </footer>
+</body>
+</html>
